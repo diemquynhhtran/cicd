@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14 # hoặc phiên bản Node.js mà bạn đang sử dụng
+    commands:
+      - echo "Installing dependencies..."
+      - npm install -g pm2
+      - cd cicd
+      - npm install
+  build:
+    commands:
+      - echo "Building backend..."
+      - npm run build
+  post_build:
+    commands:
+      - echo "Packaging artifacts..."
+      - mkdir -p ../output/backend
+      - cp -r dist ../output/backend
+      - cp package.json ../output/backend
+      - cp package-lock.json ../output/backend
+artifacts:
+  files:
+    - '**/*'
+  base-directory: output
