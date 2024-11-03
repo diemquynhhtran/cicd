@@ -8,7 +8,6 @@ phases:
       - echo "Installing dependencies..."
       - npm install -g pm2
       - ls -la
-      - cd cicd
       - npm install
   build:
     commands:
