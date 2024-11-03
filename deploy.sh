@@ -8,7 +8,7 @@ pm2 stop backend || true
 cd /home/ec2-user/cicd
 
 # Install production dependencies
-npm install
+sudo npm install
 
 # Start the backend service with PM2
 pm2 start dist/main.js --name "backend" || pm2 restart "backend"

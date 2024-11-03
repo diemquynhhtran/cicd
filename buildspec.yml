@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14 # hoặc phiên bản Node.js mà bạn đang sử dụng
+      nodejs: 20 # hoặc phiên bản Node.js mà bạn đang sử dụng
     commands:
       - echo "Installing dependencies..."
       - npm install -g pm2
