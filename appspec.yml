@@ -8,9 +8,9 @@ hooks:
     - location: deploy.sh
       timeout: 300
       runas: ec2-user
-    - location: chmod +x /home/ec2-user/cicd/deploy.sh
-      timeout: 300
-      runas: ec2-user
+#    - location: chmod +x /home/ec2-user/cicd/deploy.sh
+#      timeout: 300
+#      runas: ec2-user
 
 #
 #version: 0.0
