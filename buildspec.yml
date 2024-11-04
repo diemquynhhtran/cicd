@@ -3,10 +3,9 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20 # hoặc phiên bản Node.js mà bạn đang sử dụng
+      nodejs: 20
     commands:
       - echo "Installing dependencies..."
-      - ls -la
       - npm install
   build:
     commands:
@@ -15,11 +14,12 @@ phases:
   post_build:
     commands:
       - echo "Packaging artifacts..."
-      - mkdir -p ../output/backend
-      - cp -r dist ../output/backend
-      - cp package.json ../output/backend
-      - cp package-lock.json ../output/backend
+      - mkdir -p ./output/backend
+      - cp -r dist ./output/backend
+      - cp package.json ./output/backend
+      - cp package-lock.json ./output/backend
+      - ls -la
 artifacts:
   files:
     - '**/*'
-  base-directory: output
+  base-directory: ./output
