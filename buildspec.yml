@@ -11,15 +11,14 @@ phases:
     commands:
       - echo "Building backend..."
       - npm run build
-  post_build:
-    commands:
+#  post_build:
+#    commands:
       - echo "Packaging artifacts..."
-      - mkdir -p ./output/backend
-      - cp -r dist ./output/backend
-      - cp package.json ./output/backend
-      - cp package-lock.json ./output/backend
-      - ls -la
+#      - mkdir -p ./output/backend
+#      - cp -r dist ./output/backend
+#      - cp package.json ./output/backend
+#      - cp package-lock.json ./output/backend
 artifacts:
   files:
     - '**/*'
-  base-directory: ./output
+  base-directory: dist
