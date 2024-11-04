@@ -1,22 +1,22 @@
-#version: 0.0
-#os: linux
-#files:
-#  - source: /
-#    destination: /home/ec2-user/cicd
-#hooks:
-#  AfterInstall:
-#    - location: deploy.sh
-#      timeout: 300
-#      runas: ec2-user
-
-
 version: 0.0
 os: linux
 files:
-  - source: /output/backend/
+  - source: /
     destination: /home/ec2-user/cicd
 hooks:
   AfterInstall:
     - location: deploy.sh
       timeout: 300
       runas: ec2-user
+
+#
+#version: 0.0
+#os: linux
+#files:
+#  - source: /output/backend/
+#    destination: /home/ec2-user/cicd
+#hooks:
+#  AfterInstall:
+#    - location: deploy.sh
+#      timeout: 300
+#      runas: ec2-user
