@@ -16,7 +16,6 @@ phases:
       - echo "Packaging artifacts..."
 artifacts:
   files:
-    - '**/*'
-    - '!dist/**/*'
+    - 'dist/**/*'
     - 'deploy.sh'
   base-directory: .
