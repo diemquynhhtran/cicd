@@ -19,4 +19,5 @@ artifacts:
     - 'dist/**/*'
     - 'deploy.sh'
     - 'appspec.yml'
+    - 'package.json'
   base-directory: .

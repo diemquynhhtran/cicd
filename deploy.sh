@@ -4,6 +4,7 @@ echo "Installing dependencies..."
 # Stop the current backend service if running
 pm2 stop "test-trk" || true
 
+sudo npm install
 # Navigate to the app directory
 cd /home/ec2-user/cicd
 
